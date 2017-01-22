@@ -22,8 +22,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvx-Nr-4Ow">
-                                <rect key="frame" x="133.5" y="123" width="108" height="30"/>
-                                <state key="normal" title="入力画面に進む"/>
+                                <rect key="frame" x="149.5" y="123" width="77" height="30"/>
+                                <state key="normal" title="ここに入力"/>
                                 <connections>
                                     <segue destination="eBz-cv-GhQ" kind="show" id="MLi-Yl-FcN"/>
                                 </connections>
@@ -51,9 +51,14 @@
                             <constraint firstItem="50L-3Y-Uu9" firstAttribute="top" secondItem="xvx-Nr-4Ow" secondAttribute="bottom" constant="24" id="iYt-OL-nxT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imputField" destination="50L-3Y-Uu9" id="bPt-FB-Uxq"/>
+                        <outlet property="write" destination="xvx-Nr-4Ow" id="8L2-rd-oNU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-81" y="124"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="pyq-lu-8UB">
@@ -67,34 +72,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9f6-9k-j15">
+                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoI-qk-0MS">
-                                <rect key="frame" x="172" y="243" width="31" height="30"/>
+                                <rect key="frame" x="172" y="388" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="1O0-QN-Ak7" kind="unwind" unwindAction="reverseWithSegue:" id="jLn-bU-BlD"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="こんにちは、名前さん" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bnH-aK-ATg">
-                                <rect key="frame" x="105" y="143" width="164" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9f6-9k-j15">
-                                <rect key="frame" x="166.5" y="78" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bnH-aK-ATg" firstAttribute="centerX" secondItem="Qcp-AG-cE1" secondAttribute="centerX" id="D3o-V7-vJp"/>
-                            <constraint firstItem="9f6-9k-j15" firstAttribute="centerX" secondItem="Qcp-AG-cE1" secondAttribute="centerX" id="QZl-Jl-4Pa"/>
-                            <constraint firstItem="gMK-dH-wnD" firstAttribute="top" secondItem="NoI-qk-0MS" secondAttribute="bottom" constant="394" id="ccX-7j-wNR"/>
-                            <constraint firstItem="NoI-qk-0MS" firstAttribute="centerX" secondItem="Qcp-AG-cE1" secondAttribute="centerX" id="dE6-Zq-6dI"/>
-                            <constraint firstItem="NoI-qk-0MS" firstAttribute="top" secondItem="bnH-aK-ATg" secondAttribute="bottom" constant="70" id="e6I-EJ-8T5"/>
-                            <constraint firstItem="bnH-aK-ATg" firstAttribute="top" secondItem="9f6-9k-j15" secondAttribute="bottom" constant="44" id="uXe-eh-Y9h"/>
+                            <constraint firstItem="NoI-qk-0MS" firstAttribute="centerX" secondItem="Qcp-AG-cE1" secondAttribute="centerX" id="2sg-F5-1rs"/>
+                            <constraint firstItem="9f6-9k-j15" firstAttribute="centerY" secondItem="Qcp-AG-cE1" secondAttribute="centerY" id="FeT-6H-NSq"/>
+                            <constraint firstItem="9f6-9k-j15" firstAttribute="centerX" secondItem="Qcp-AG-cE1" secondAttribute="centerX" id="hpf-OI-dsr"/>
+                            <constraint firstItem="9f6-9k-j15" firstAttribute="centerY" secondItem="Qcp-AG-cE1" secondAttribute="centerY" id="oL1-QB-4zA"/>
+                            <constraint firstItem="NoI-qk-0MS" firstAttribute="top" secondItem="9f6-9k-j15" secondAttribute="bottom" constant="44" id="odv-gZ-ZVc"/>
                         </constraints>
                     </view>
                     <connections>
@@ -104,7 +102,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tff-LW-Sgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="1O0-QN-Ak7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="734" y="124"/>
+            <point key="canvasLocation" x="733.60000000000002" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>

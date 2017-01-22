@@ -11,9 +11,10 @@ import UIKit
 class ResultViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
 
+    var x: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+label.text = "こんにちは\(x)さん"
         // Do any additional setup after loading the view.
     }
 
@@ -33,6 +34,7 @@ class ResultViewController: UIViewController {
     }
     */
     
-    let str = "こんにちは、名前さん"
+   
 
 }
+
